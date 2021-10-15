@@ -13,12 +13,12 @@ export const BackNavigation = () => {
 
   return (
     <View
-      style={{ width: '100%', alignSelf: 'flex-start', paddingHorizontal: 20, marginVertical: 10 }}
+      style={{ width: '100%', alignSelf: 'flex-start', paddingHorizontal: 20, height: 50 }}
     >
       <TouchableOpacity
         style={{
-          height: 40,
-          width: 40,
+          height: 35,
+          width: 35,
           backgroundColor: colors.secondary,
           borderRadius: 40,
           justifyContent: 'center',
@@ -29,7 +29,7 @@ export const BackNavigation = () => {
         <Icon 
           name="arrow-left"
           type="FontAwesome5"
-          size={30}
+          size={20}
           color={colors.light}
         />
       </TouchableOpacity>

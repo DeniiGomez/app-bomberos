@@ -11,6 +11,13 @@ export const StackNav = () => (
   <NavigationContainer>
     <Stack.Navigator>
       <Stack.Screen
+        name="SplashScreen"
+        component={Routes.SplashScreen}
+        options={{
+          headerShown: false,
+        }}
+      />
+      <Stack.Screen
         name="Login"
         component={Routes.Login}
         options={{
@@ -34,6 +41,13 @@ export const StackNav = () => (
       <Stack.Screen
         name="TabBottom"
         component={TabNav}
+        options={{
+          headerShown: false,
+        }}
+      />
+      <Stack.Screen
+        name="FormEmergency"
+        component={Routes.FormEmergency}
         options={{
           headerShown: false,
         }}

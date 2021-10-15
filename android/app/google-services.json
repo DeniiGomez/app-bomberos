@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "812063707664",
+    "firebase_url": "https://prueba-push-notification-f4804-default-rtdb.firebaseio.com",
+    "project_id": "prueba-push-notification-f4804",
+    "storage_bucket": "prueba-push-notification-f4804.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:812063707664:android:ccbcbee8970eabceadf095",
+        "android_client_info": {
+          "package_name": "com.app_bomberos"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "812063707664-m4cavl6abfennjpdcb9t6qn22c2ancie.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAXXsJA5k-bcq3TGRz380Av8xx3HNd7OAk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "812063707664-m4cavl6abfennjpdcb9t6qn22c2ancie.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

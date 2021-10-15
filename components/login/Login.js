@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import {
   View,
   Text,
@@ -12,17 +12,25 @@ import {
 import { colors, styles } from "../../styles";
 import { useForm } from "react-hook-form";
 import { FormControl, Input, LabelError, Button } from "../utils/Form";
+import { UserContext } from "../../context/user/UserContext";
 
 export const Login = ({ navigation }) => {
+
+  const { login } = useContext(UserContext)
 
   const dimension = Dimensions.get('window')
 
   const { control, handleSubmit, formState: { errors } } = useForm()
 
-  const onSubmit = () => navigation.replace('TabBottom')
+  const onSubmit = (data) => {
+    //console.log(data)
+    login(data)
+      .then(() => navigation.replace('TabBottom'))
+      .catch(err => console.log(err.message))
+  }
   
   return (
-    <SafeAreaView>
+    <SafeAreaView style={{flex: 1}}>
     <StatusBar barStyle="light-content" backgroundColor={colors.primary}/>
     <ScrollView>
         <View style={[styles.container, {height: dimension.height}]}>

@@ -9,7 +9,7 @@ import { useController } from "react-hook-form";
 
 import { colors, styles } from "../../styles";
 
-export const Input = ({ name, placeholder, control, required, type="text" }) => {
+export const Input = ({ name, placeholder, control, required, type="text", multiline=false, defaultValue="" }) => {
   const emailPattern = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i
   const { field } = useController({
     control,
@@ -23,7 +23,7 @@ export const Input = ({ name, placeholder, control, required, type="text" }) => 
         message: 'Correo no valido'
       }
     },
-    defaultValue: '',
+    defaultValue: defaultValue,
     name
   })
   return(
@@ -31,9 +31,11 @@ export const Input = ({ name, placeholder, control, required, type="text" }) => 
       value={field.value}
       onChangeText={field.onChange}
       placeholder={placeholder}
-      style={styles.input}
+      style={[styles.input, { textAlignVertical: multiline ? 'top' : 'center' }]}
       secureTextEntry={type === 'password' ? true : false}
       placeholderTextColor={colors.gray}
+      multiline={multiline}
+      numberOfLines={multiline ? 5 : 1}
     />
   )
 }
@@ -54,13 +56,13 @@ export const Label = ({ text, style }) => (
   </Text>
 )
 
-export const Button = ({ title, style, onPress }) => (
+export const Button = ({ title, style, onPress, titleStyle }) => (
   <TouchableOpacity 
     style={[styles.button, style]}
     onPress={onPress}
   >
     <Text 
-      style={[styles.text, { fontWeight: 'bold' }]}
+      style={[styles.text, { fontWeight: 'bold' }, titleStyle]}
     >
       {title}
     </Text>
@@ -69,7 +71,7 @@ export const Button = ({ title, style, onPress }) => (
 
 export const FormControl = (props) => (
   <View 
-    style={{ marginBottom: 20, width: '100%'}}
+    style={[{ marginBottom: 20, width: '100%',  }, props.style]}
   >
     {props.children}
   </View>

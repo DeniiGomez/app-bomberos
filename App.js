@@ -8,8 +8,19 @@
 
 import React from 'react';
 import 'react-native-gesture-handler';
+import { UserState } from './context/user/UserState';
+import { EmergencyState } from './context/emergency/EmergencyState';
 import { StackNav } from './components/navigator/Stack';
+import { RemotePushController } from './RemotePushController';
+
 
 export const App = () => {
-  return <StackNav/>
+  return (
+    <UserState>
+      <EmergencyState>
+        <StackNav/>
+        <RemotePushController/>
+      </EmergencyState>
+    </UserState>
+  )
 }

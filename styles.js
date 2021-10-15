@@ -5,13 +5,14 @@ export const colors = {
   secondary: '#E43F5A',
   gray: '#A6A9B6',
   gra2: '#393E46',
-  light: '#FFF'
+  light: '#FFF',
+  info: '#1F4068'
 }
 
 export const sizes = {
   title1: 24,
   title2: 20,
-  body: 18,
+  body: 16,
 }
 
 export const styles = StyleSheet.create({
@@ -31,20 +32,28 @@ export const styles = StyleSheet.create({
   },
   input: {
     width: '100%',
-    height: 50,
     borderRadius: 4,
-    padding: 10,
+    paddingVertical: 8,
+    paddingHorizontal: 16,
     backgroundColor: colors.light,
     fontSize: sizes.body,
-    justifyContent: 'center'
+    justifyContent: 'center',
+    //textAlignVertical: 'top'
   },
   button: {
     width: '100%',
-    height: 50,
     borderRadius: 4,
-    padding: 10,
+    paddingVertical: 8,
+    paddingHorizontal: 16,
     backgroundColor: colors.secondary,
     justifyContent: 'center',
     marginBottom: 10,
+  },
+  shadow: {
+    shadowColor: '#000',
+    shadowOffset: {width:0, height:2},
+    shadowOpacity: 0.1,
+    shadowRadius: 8,
+    elevation: 7,
   }
 })
