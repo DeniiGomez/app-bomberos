@@ -28,7 +28,7 @@
       <!-- You will only need to add this meta-data tag, but make sure it's a child of application -->
       <meta-data
         android:name="com.google.android.geo.API_KEY" 
-        android:value="AIzaSyDN754h9HcCzhnk4z2ui50m8zb5r4H2ESE"/>
+        android:value=""/>
 
       <!-- Push notifacion react native-->
       <!--<meta-data-->
